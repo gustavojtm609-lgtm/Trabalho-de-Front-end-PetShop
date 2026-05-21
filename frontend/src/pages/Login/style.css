@@ -1,0 +1,75 @@
+/* VARIÁVEIS LOCAIS (Fáceis de manter) */
+:root {
+    --form-bg: #e6f0f3;
+    --primary-color: #3f7fd3;
+    --border-dark: #353535;
+    --radius-sm: 20px;
+    --radius-md: 30px;
+    --transition-speed: 0.2s;
+    --font-serif: "Instrument Serif", serif;
+}
+
+/*PÁGINA DE LOGIN (Container Principal) */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Combina com o margin-top do form */
+    min-height: 100vh; /* Garante que ocupe a tela inteira */
+    text-align: center;
+    font-family: var(--font-serif);
+    box-sizing: border-box;
+}
+
+/* FORMULÁRIO DE LOGIN */
+.login-page form {
+    width: 100%;
+    max-width: 500px; /* Permite que seja responsivo em telas menores */
+    margin-top: 12vh;
+    background-color: var(--form-bg);
+    border-radius: var(--radius-md);
+    padding: 30px 20px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    box-sizing: border-box;
+}
+
+/* 
+   INPUTS (Campos de E-mail/Senha)
+    */
+.login-page form input {
+    width: 100%; /* 100% é melhor que 90% quando se usa box-sizing */
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* Efeito ao clicar para digitar */
+.login-page form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(63, 127, 211, 0.2);
+}
+
+/* BOTÃO DE LOGIN */
+.login-page form button {
+    padding: 12px 35px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-dark);
+    background-color: #ffffff;
+    font-size: 16px; /* Tamanho um pouco maior para mais destaque */
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all var(--transition-speed) ease;
+}
+
+/* Efeito ao passar o mouse */
+.login-page form button:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
